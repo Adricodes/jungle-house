@@ -24,7 +24,11 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
+    <div id="my-react-app">
+          <!-- The content of this HTML element will be replaced by my React components -->
+      </div>
+      <div id="root">Hello, Classrooms</div>
+    <title>Hello, Classrooms</title>
   </head>
   <body>
     <noscript>You need to enable JavaScript to run this app.</noscript>
@@ -39,5 +43,17 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel"></script>
+    const myComponent = () = {
+      <div>return My component looks good 😊</div>
+    }
+      ReactDOM.render(
+        <MyComponent />
+        <div>My React element replaces the original content</div>
+        document.getElementById("root")
+      )
   </body>
 </html>
