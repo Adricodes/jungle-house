@@ -10,7 +10,7 @@ const Navbar = () => {
                 <NavLink to="/" className="nav__logo">
                     Navigation Bar
                 </NavLink></nav>
-            <header/>
+            <header />
 
 
             <div
@@ -69,8 +69,10 @@ const Navbar = () => {
                     <div className="nav__toggle" id="nav-toggle">
                         <IoMenu />
                     </div>
-        </header>
-    );
-};
+                </nav>
+            <header/>
 
-export default Navbar;
+            );
+{};
+
+            export default Navbar </ div>

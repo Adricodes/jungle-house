@@ -6,7 +6,7 @@ import "./App.css";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from './pages/Navbar';
 import Home from './pages/Home';
-import News from "./pages/News";
+import News from ./pages/News';
 
 function App() {
 	return (
