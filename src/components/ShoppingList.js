@@ -1,5 +1,3 @@
-
-
 const plantList = [
     'Monstera',
     'Ficus Lyrata',
