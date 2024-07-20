@@ -27,6 +27,53 @@ function handleSubmit(e) {
     alert(e.target['my_input'].value)
 }
 
+function Cart({ cart, updateCart }) {
+    const monsteraPrice = 8
+    const [isOpen, setIsOpen] = useState(true)
+
+    return isOpen ? (
+        <div className='jh-cart'>
+            <button
+                className='jh-cart-toggle-button'
+                onClick={() => setIsOpen(false)}
+            >
+                Close
+            </button>
+            <h2>Cart</h2>
+            <h3>Total: {monsteraPrice * cart}€</h3>
+            <button onClick={() => updateCart(0)}>Clear cart</button>
+        </div>
+) : (
+        <div className='jh-cart-closed'>
+            <button
+                className='jh-cart-toggle-button'
+                onClick={() => setIsOpen(true)}
+            >
+                Open cart
+            </button>
+        </div>
+    )
+}
+
+function App() {
+    const [cart, updateCart] = useState([])
+    
+    return (
+        <div>
+            <Banner>
+                <img src={logo} alt='Jungle House' className='jh-logo' />
+                <h1 className='jh-title'>Jungle House</h1>
+            </Banner>
+            <div className='jh-layout-inner'>
+                <Cart cart={cart} updateCart={updateCart} />
+                <ShoppingList cart={cart} updateCart={updateCart} />
+            </div>
+            <Footer />
+        </div>
+    )
+}
 
 export default App
+
+export default Cart
 
